@@ -16,7 +16,6 @@ const font = (file, family, style = 'normal', weight = '100 900') =>
 
 const FONTS = {
   serif: font('libre-caslon-text-400-latin.woff2', 'Caslon', 'normal', '400'),
-  serifItalic: font('libre-caslon-text-400-italic-latin.woff2', 'Caslon', 'italic', '400'),
   sans: font('schibsted-grotesk-400-latin.woff2', 'Schibsted'),
   mono: font('martian-mono-400-latin.woff2', 'Martian'),
 };
@@ -44,12 +43,12 @@ for (const [mode, t] of Object.entries(THEMES)) {
   const colophon = SHIPPED.map(
     (d, i) => `<text x="924" y="${170 + i * 34}" class="sans" font-size="17" fill="${t.body}">${d}</text>`,
   ).join('');
-  write(`banner-${mode}.svg`, svg(1280, 360, ['serif', 'serifItalic', 'sans', 'mono'], '',
+  write(`banner-${mode}.svg`, svg(1280, 360, ['serif', 'sans', 'mono'], '',
     `<rect width="1280" height="360" rx="14" fill="${t.page}"/>` +
     `<text x="80" y="92" class="mono" font-size="14" fill="${t.faint}">Astoria Design</text>` +
     `<text x="74" y="218" class="serif" font-size="128" fill="${t.text}" letter-spacing="-2">Abdullah</text>` +
     `<rect x="80" y="246" width="56" height="3" fill="${t.gold}"/>` +
-    `<text x="80" y="292" class="serif" font-style="italic" font-size="25" fill="${t.body}">Design and strategy for companies doing difficult science.</text>` +
+    `<text x="80" y="292" class="sans" font-size="22" fill="${t.body}">Design and strategy for companies doing difficult science.</text>` +
     `<line x1="880" y1="84" x2="880" y2="296" stroke="${t.rule}" stroke-width="1"/>` +
     `<text x="924" y="118" class="sans" font-size="15" fill="${t.gold}">Shipped</text>` +
     colophon,
