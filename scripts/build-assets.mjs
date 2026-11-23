@@ -35,13 +35,14 @@ const svg = (w, h, fonts, css, body, label) =>
 
 const write = (name, content) => writeFileSync(join(out, name), content);
 
-const SHIPPED = ['pamir.vc', 'hypogenica.com', 'alabamabiolabs.org', 'astoriadesignlab.com'];
+// Names only: client domains stay off the profile on purpose.
+const SHIPPED = ['Pamir Ventures', 'Hypogenica', 'Alabama Biolabs', 'Astoria Design'];
 
 for (const [mode, t] of Object.entries(THEMES)) {
   // Banner: the name set large, the studio line under it, and a colophon of
-  // shipped domains on the right, the way a printed book lists its plates.
+  // shipped work on the right, the way a printed book lists its plates.
   const colophon = SHIPPED.map(
-    (d, i) => `<text x="924" y="${170 + i * 34}" class="mono" font-size="15" fill="${t.body}">${d}</text>`,
+    (d, i) => `<text x="924" y="${170 + i * 34}" class="sans" font-size="17" fill="${t.body}">${d}</text>`,
   ).join('');
   write(`banner-${mode}.svg`, svg(1280, 360, ['serif', 'serifItalic', 'sans', 'mono'], '',
     `<rect width="1280" height="360" rx="14" fill="${t.page}"/>` +
@@ -76,20 +77,20 @@ for (const [mode, t] of Object.entries(THEMES)) {
 
 // Work tiles for the highlight row. Lines come from each site's own description.
 const WORK = [
-  { slug: 'pamir', name: 'Pamir', domain: 'pamir.vc', lines: ['First check for', 'technical pioneers'] },
-  { slug: 'hypogenica', name: 'Hypogenica', domain: 'hypogenica.com', lines: ['Carbon negative', 'calcium carbonate'] },
-  { slug: 'alabama', name: 'Alabama', domain: 'alabamabiolabs.org', lines: ['Biomanufacturing,', 'lab to market'] },
-  { slug: 'astoria', name: 'Astoria', domain: 'astoriadesignlab.com', lines: ['The studio’s', 'own site'] },
+  { slug: 'pamir', name: 'Pamir', kind: 'Venture fund', lines: ['First check for', 'technical pioneers'] },
+  { slug: 'hypogenica', name: 'Hypogenica', kind: 'Materials', lines: ['Carbon negative', 'calcium carbonate'] },
+  { slug: 'alabama', name: 'Alabama', kind: 'Biomanufacturing', lines: ['Biomanufacturing,', 'lab to market'] },
+  { slug: 'astoria', name: 'Astoria', kind: 'Design studio', lines: ['The studio’s', 'own site'] },
 ];
 for (const [mode, t] of Object.entries(THEMES)) {
   for (const w of WORK) {
     write(`work-${w.slug}-${mode}.svg`, svg(220, 176, ['serif', 'sans', 'mono'], '',
       `<rect x="0.5" y="0.5" width="219" height="175" rx="8" fill="${t.lift}" stroke="${t.rule}"/>` +
-      `<text x="18" y="34" class="mono" font-size="11" fill="${t.faint}">${w.domain}</text>` +
+      `<text x="18" y="34" class="mono" font-size="11" fill="${t.faint}">${w.kind}</text>` +
       `<text x="17" y="82" class="serif" font-size="32" fill="${t.text}">${w.name}</text>` +
       `<rect x="18" y="98" width="26" height="2" fill="${t.gold}"/>` +
       w.lines.map((l, i) => `<text x="18" y="${132 + i * 22}" class="sans" font-size="17" fill="${t.body}">${l}</text>`).join(''),
-      `${w.name}, ${w.domain}: ${w.lines.join(' ')}`));
+      `${w.name}, ${w.kind}: ${w.lines.join(' ')}`));
   }
 }
 console.log('built assets');
