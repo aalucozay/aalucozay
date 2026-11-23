@@ -20,21 +20,21 @@
 </p>
 
 <p>
-  <a href="https://pamir.vc"><picture>
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/work-pamir-dark.svg">
-    <img src="assets/work-pamir-light.svg" width="24%" alt="Pamir Ventures, pamir.vc">
-  </picture></a>
-  <a href="https://hypogenica.com"><picture>
+    <img src="assets/work-pamir-light.svg" width="24%" alt="Pamir Ventures">
+  </picture>
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/work-hypogenica-dark.svg">
-    <img src="assets/work-hypogenica-light.svg" width="24%" alt="Hypogenica, hypogenica.com">
-  </picture></a>
-  <a href="https://alabamabiolabs.org"><picture>
+    <img src="assets/work-hypogenica-light.svg" width="24%" alt="Hypogenica">
+  </picture>
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/work-alabama-dark.svg">
-    <img src="assets/work-alabama-light.svg" width="24%" alt="Alabama Biomanufacturing Labs, alabamabiolabs.org">
-  </picture></a>
+    <img src="assets/work-alabama-light.svg" width="24%" alt="Alabama Biomanufacturing Labs">
+  </picture>
   <a href="https://astoriadesignlab.com"><picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/work-astoria-dark.svg">
-    <img src="assets/work-astoria-light.svg" width="24%" alt="Astoria Design, astoriadesignlab.com">
+    <img src="assets/work-astoria-light.svg" width="24%" alt="Astoria Design">
   </picture></a>
 </p>
 
@@ -56,9 +56,9 @@ The work goes in front of investors, regulators and clinical partners, so the jo
 
 **Live**
 
-- [**Pamir Ventures**](https://pamir.vc): an illustrated alpine world with a day side and a night side, for a fund that writes the first check for technical pioneers.
-- [**Hypogenica**](https://hypogenica.com): a dark mineral world for a company making carbon negative calcium carbonate with a process inspired by cave science.
-- [**Alabama Biomanufacturing Labs**](https://alabamabiolabs.org): the public home of the program helping Alabama's biomanufacturing companies grow from the lab to the market.
+- **Pamir Ventures**: an illustrated alpine world with a day side and a night side, for a fund that writes the first check for technical pioneers.
+- **Hypogenica**: a dark mineral world for a company making carbon negative calcium carbonate with a process inspired by cave science.
+- **Alabama Biomanufacturing Labs**: the public home of the program helping Alabama's biomanufacturing companies grow from the lab to the market.
 - [**Astoria Design**](https://astoriadesignlab.com): the studio's own site.
 
 **In progress**
